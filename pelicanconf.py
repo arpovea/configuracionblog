@@ -17,6 +17,8 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+OUTPUT_PATH = '../blog-web/'
+
 
 # Blogroll
 LINKS = (('Pelican', 'https://getpelican.com/'),
