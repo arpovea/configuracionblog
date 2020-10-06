@@ -23,8 +23,6 @@ THEME = './MinimalXY'
 # Theme customizations
 MINIMALXY_CUSTOM_CSS = 'static/custom.css'
 MINIMALXY_FAVICON = 'favicon.ico'
-MINIMALXY_START_YEAR = 2009
-MINIMALXY_CURRENT_YEAR = date.today().year
 
 # Author
 AUTHOR_INTRO = u'Hello world! I’m John Doe.'
