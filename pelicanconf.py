@@ -18,7 +18,7 @@ OUTPUT_PATH = '../blog-web/'
 DEFAULT_PAGINATION = 10
 
 # Theme
-THEME = '/path/to/MinimalXY'
+THEME = './MinimalXY'
 
 # Theme customizations
 MINIMALXY_CUSTOM_CSS = 'static/custom.css'
