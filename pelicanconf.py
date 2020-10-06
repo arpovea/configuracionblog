@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*- #
 
 AUTHOR = 'Adrián Rodríguez Povea'
-SITENAME = 'Blog Informático'
-SITEURL = ''
+SITENAME = "Blog Informático"
+SITEURL = 'https://arpovea.vercel.app'
 
 PATH = 'content'
 
@@ -44,6 +44,6 @@ SOCIAL = (
 
 # Menu
 MENUITEMS = (
-    ('Categories', '/' + CATEGORIES_SAVE_AS),
-    ('Archive', '/' + ARCHIVES_SAVE_AS),
+    ('Categories', '/'),
+    ('Archive', '/'),
 )
