@@ -36,7 +36,7 @@ DEFAULT_PAGINATION = 10
 #Configuración del Tema:
 
 # Display pages list on the top menu
-DISPLAY_PAGES_ON_MENU (True)
+#DISPLAY_PAGES_ON_MENU (True)
 
 # Display categories list on the top menu
 #DISPLAY_CATEGORIES_ON_MENU (True)
