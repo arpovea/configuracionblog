@@ -11,60 +11,41 @@ TIMEZONE = 'Europe/Paris'
 
 DEFAULT_LANG = 'es'
 
-
 #Carpeta donde se genera la web
 OUTPUT_PATH = '../blog-web/'
-
-#Carpeta del tema elegido
-THEME = './blueidea'
-
-# Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
-TRANSLATION_FEED_ATOM = None
-AUTHOR_FEED_ATOM = None
-AUTHOR_FEED_RSS = None
-
 
 #Paginación:
 DEFAULT_PAGINATION = 10
 
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# Theme
+THEME = '/path/to/MinimalXY'
 
+# Theme customizations
+MINIMALXY_CUSTOM_CSS = 'static/custom.css'
+MINIMALXY_FAVICON = 'favicon.ico'
+MINIMALXY_START_YEAR = 2009
+MINIMALXY_CURRENT_YEAR = date.today().year
 
-#Configuración del Tema:
+# Author
+AUTHOR_INTRO = u'Hello world! I’m John Doe.'
+AUTHOR_DESCRIPTION = u'Hello world! I’m John Doe. I like coffee, birds and Python.'
+AUTHOR_AVATAR = 'http://www.gravatar.com/avatar/abcdefghijkl?s=240'
+AUTHOR_WEB = 'http://mypersonalsite.com'
 
-# Display pages list on the top menu
-#DISPLAY_PAGES_ON_MENU (True)
+# Services
+GOOGLE_ANALYTICS = 'UA-12345678-9'
+DISQUS_SITENAME = 'johndoe'
 
-# Display categories list on the top menu
-#DISPLAY_CATEGORIES_ON_MENU (True)
+# Social
+SOCIAL = (
+    ('facebook', 'http://www.facebook.com/johndoe'),
+    ('twitter', 'http://twitter.com/johndoe'),
+    ('github', 'https://github.com/johndoe'),
+    ('linkedin', 'http://www.linkedin.com/in/johndoe'),
+)
 
-# Display categories list as a submenu of the top menu
-#DISPLAY_CATEGORIES_ON_SUBMENU (False)
-
-# Display the category in the article's info
-#DISPLAY_CATEGORIES_ON_POSTINFO (False)
-
-# Display the author in the article's info
-#DISPLAY_AUTHOR_ON_POSTINFO (False)
-
-# Display the search form
-#DISPLAY_SEARCH_FORM (False)
-
-# Sort pages list by a given attribute
-#PAGES_SORT_ATTRIBUTE (Title)
-
-# Display the "Fork me on Github" banner
-#GITHUB_URL (None)
-
-# Blogroll
-LINKS = (('Pelican', 'https://getpelican.com/'),
-         ('Python.org', 'https://www.python.org/'),
-         ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
-         ('You can modify those links in your config file', '#'),)
-
-# Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+# Menu
+MENUITEMS = (
+    ('Categories', '/' + CATEGORIES_SAVE_AS),
+    ('Archive', '/' + ARCHIVES_SAVE_AS),
+)
