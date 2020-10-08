@@ -1,0 +1,10 @@
+usuario0:x:1100:1100:"usuario0":/home/usuario0:/bin/bash
+usuario1:x:1101:1101:"usuario1":/home/usuario1:/bin/bash
+usuario2:x:1102:1102:"usuario2":/home/usuario2:/bin/bash
+usuario3:x:1103:1103:"usuario3":/home/usuario3:/bin/bash
+usuario4:x:1104:1104:"usuario4":/home/usuario4:/bin/bash
+usuario5:x:1105:1105:"usuario5":/home/usuario5:/bin/bash
+usuario6:x:1106:1106:"usuario6":/home/usuario6:/bin/bash
+usuario7:x:1107:1107:"usuario7":/home/usuario7:/bin/bash
+usuario8:x:1108:1108:"usuario8":/home/usuario8:/bin/bash
+usuario9:x:1109:1109:"usuario9":/home/usuario9:/bin/bash

@@ -15,7 +15,7 @@ DEFAULT_LANG = 'es'
 OUTPUT_PATH = '../blog-web/'
 
 #Paginación:
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 5
 
 # Theme
 THEME = './MinimalXY'
