@@ -1,18 +1,13 @@
 ---
-layout: post
 title: Tareas con RAID5
-excerpt_separator: <!--more-->
-author:
-- Adrián Rodríguez Povea
----
+author: Adrián Rodríguez Povea
+Summary:Buenas! En esta ocasión vamos a realizar un RAID5 y vamos a realizar varias pruebas. Utilizaremos RAID software en Linux con `mdadm`.
 
-***
+---
 
 Buenas! En esta ocasión vamos a realizar un RAID5 y vamos a realizar varias pruebas. Utilizaremos RAID software en Linux con `mdadm`.
 
 ***
-
-<!--more-->
 
 ## Preparación para la tarea sobre RAID5
 

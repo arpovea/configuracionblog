@@ -1,18 +1,13 @@
 ---
-layout: post
 title: Probando Dig y Wireshark
-excerpt_separator: <!--more-->
-author:
-- Adrián Rodríguez Povea
----
+author: Adrián Rodríguez Povea
+Summary: Buenas! En esta ocasión vamos a probar un poco el comando dig y el programa Wireshark, con los cuales realizaremos consultas DNS e investigaremos un poco el tráfico de una petición a una página web.
 
-***
+---
 
 Buenas! En esta ocasión vamos a probar un poco el comando dig y el programa Wireshark, con los cuales realizaremos consultas DNS e investigaremos un poco el tráfico de una petición a una página web.
 
 ***
-
-<!--more-->
 
 ## DIG    
 Se va a realizar una petición DNS con el comando dig a las páginas www.marca.com y www.elmundo.es:

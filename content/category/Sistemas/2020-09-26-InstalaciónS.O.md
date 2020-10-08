@@ -1,18 +1,13 @@
 ---
-layout: post
 title: Instalación Debian Buster con LVM
-excerpt_separator: <!--more-->
-author:
-- Adrián Rodríguez Povea
----
+author: Adrián Rodríguez Povea
+Summary: Buenas! En esta ocasión vamos a instalar el sistema operativo Debian Buster con particiones LVM, y vamos a exponer los errores producidos y las soluciones que hemos realizado.
 
-***
+---
 
 Buenas! En esta ocasión vamos a instalar el sistema operativo Debian Buster con particiones LVM, y vamos a exponer los errores producidos y las soluciones que hemos realizado.
 
 ***
-
-<!--more-->
 
 ## Esquema de particiones realizado en la instalación:
 

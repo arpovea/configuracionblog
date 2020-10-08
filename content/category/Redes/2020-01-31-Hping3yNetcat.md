@@ -1,18 +1,13 @@
 ---
-layout: post
 title: Hping3 y NetCat
-excerpt_separator: <!--more-->
-author:
-- Adrián Rodríguez Povea
----
+author: Adrián Rodríguez Povea
+Summary: Buenas! En esta ocasión vamos a probar un poco el comando Hping3 y  NetCat, con los cuales realizaremos pruebas en un escenario creado en una máquina virtual con Mininet. Probaremos a modificar los paquetes de ping y a conectarnos a distintos puertos y realizar varias conexiones.
 
-***
+---
 
 Buenas! En esta ocasión vamos a probar un poco el comando Hping3 y  NetCat, con los cuales realizaremos pruebas en un escenario creado en una máquina virtual con Mininet. Probaremos a modificar los paquetes de ping y a conectarnos a distintos puertos y realizar varias conexiones.
 
 ***
-
-<!--more-->
 
 ## Mininet
 
