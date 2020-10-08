@@ -27,7 +27,7 @@ MINIMALXY_FAVICON = 'favicon.ico'
 # Author
 AUTHOR_INTRO = u'¡Hola Mundo! Mi nombre es Adrián.'
 AUTHOR_DESCRIPTION = u'Apasionado de las tecnologías.'
-AUTHOR_AVATAR = '/MinimalXY/static/images/arpovealogo.png'
+AUTHOR_AVATAR = '/images/arpovealogo.png'
 AUTHOR_WEB = 'http://arpovea.vercel.app'
 
 # Services
