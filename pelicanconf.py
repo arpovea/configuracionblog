@@ -25,8 +25,8 @@ MINIMALXY_CUSTOM_CSS = 'static/custom.css'
 MINIMALXY_FAVICON = 'favicon.ico'
 
 # Author
-AUTHOR_INTRO = u'Buenas! Mi nombre es Adrián'
-AUTHOR_DESCRIPTION = u'Apasionado de las tecnologías'
+AUTHOR_INTRO = u'¡Hola Mundo! Mi nombre es Adrián.'
+AUTHOR_DESCRIPTION = u'Apasionado de las tecnologías.'
 AUTHOR_AVATAR = 'http://www.gravatar.com/avatar/abcdefghijkl?s=240'
 AUTHOR_WEB = 'http://arpovea.vercel.app'
 
