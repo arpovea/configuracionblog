@@ -17,6 +17,17 @@ OUTPUT_PATH = '../blog-web/'
 #Paginación:
 DEFAULT_PAGINATION = 5
 
+#Markdown:
+
+MARKDOWN = {    
+'extension_configs': {
+	'markdown.extensions.codehilite': {'css_class': 'highlight'},
+	'markdown.extensions.headerid': {},
+	'markdown.extensions.extra': {},
+},
+'output_format': 'html5',
+}
+
 # Theme
 THEME = './MinimalXY'
 
