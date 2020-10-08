@@ -30,41 +30,40 @@ Se dejan por aquí los enlaces a los scripts tanto del escenario como del despli
 
 Una vez desplegado el escenario los comandos para configurar la red en cada máquina son:    
 
-```bash
-#H1 
-ip a add 10.0.100.3/24 dev h1-eth0
-ip r add default via 10.0.100.1
-
-#H2
-ip a add 10.0.100.4/24 dev h2-eth0
-ip r add default via 10.0.100.2
-
-#R1
-ip a add 10.0.110.1/24 dev r1-eth0
-ip a add 10.0.100.1/24 dev r1-eth1
-ip a add 10.0.100.2/24 dev r1-eth2
-ip r add default via 10.0.110.2
-
-#R2
-ip a add 10.0.110.2/24 dev r2-eth0
-ip a add 10.0.120.1/24 dev r2-eth1
-ip r add 10.0.100.0/24 via 10.0.110.1
-ip r add 10.0.130.0/24 via 10.0.120.2
-
-#R3
-ip a add 10.0.120.2/24 dev r3-eth0
-ip a add 10.0.130.1/24 dev r3-eth1
-ip a add 10.0.130.2/24 dev r3-eth2
-ip r add default via 10.0.120.1
-
-#H3
-ip a add 10.0.130.3/24 dev h3-eth0
-ip r add default via 10.0.130.1
-
-#H4
-ip a add 10.0.130.4/24 dev h4-eth0
-ip r add default via 10.0.130.2
-```    
+	:::bash
+	#H1 
+	ip a add 10.0.100.3/24 dev h1-eth0
+	ip r add default via 10.0.100.1
+	
+	#H2
+	ip a add 10.0.100.4/24 dev h2-eth0
+	ip r add default via 10.0.100.2
+	
+	#R1
+	ip a add 10.0.110.1/24 dev r1-eth0
+	ip a add 10.0.100.1/24 dev r1-eth1
+	ip a add 10.0.100.2/24 dev r1-eth2
+	ip r add default via 10.0.110.2
+	
+	#R2
+	ip a add 10.0.110.2/24 dev r2-eth0
+	ip a add 10.0.120.1/24 dev r2-eth1
+	ip r add 10.0.100.0/24 via 10.0.110.1
+	ip r add 10.0.130.0/24 via 10.0.120.2
+	
+	#R3
+	ip a add 10.0.120.2/24 dev r3-eth0
+	ip a add 10.0.130.1/24 dev r3-eth1
+	ip a add 10.0.130.2/24 dev r3-eth2
+	ip r add default via 10.0.120.1
+	
+	#H3
+	ip a add 10.0.130.3/24 dev h3-eth0
+	ip r add default via 10.0.130.1
+	
+	#H4
+	ip a add 10.0.130.4/24 dev h4-eth0
+	ip r add default via 10.0.130.2    
 
 ***
 
@@ -74,9 +73,9 @@ Ahora se va a realizar con el comando HPing3 un Echo Request desde H1 hacia H4 c
 
 Comando H1:
 
-```bash
-hping3 -K 0 -c 5 10.0.130.4
-```
+	:::bash
+	hping3 -K 0 -c 5 10.0.130.4
+
 La opción -K indica que utilice Echo Request, este vendria por defecto pero con esto se le especifica.    
 La opción -c indica el número de paquetes que se enviarán en este caso "5".     
 
@@ -89,9 +88,8 @@ A continución cambiaremos la TTL para que no sea alcanzable H4:
 
 Comando H1:    
 
-```bash
-hping -K 0 --ttl 3 -c 3 10.0.130.4
-```
+	:::bash
+	hping -K 0 --ttl 3 -c 3 10.0.130.4
 
 La opcion --ttl cambia por defecto la ttl de "64"(por defecto) en "3" en este caso.
 
@@ -99,11 +97,11 @@ La opcion --ttl cambia por defecto la ttl de "64"(por defecto) en "3" en este ca
 
 Como se puede observar en la imagen no llega a su destino.    
 
+Ahora se intentará realizar una conexion desde el puerto "4000" al puerto "80" desde H1:   
 
-Ahora se intentará realizar una conexion desde el puerto "4000" al puerto "80" desde H1:    
-```bash
-hping3 -s 4000 -p 80 10.0.130.4
-```
+	:::bash
+	hping3 -s 4000 -p 80 10.0.130.4
+
 
 La opción -s indica el puerto base.    
 La opción -p indica el puerto destino.    
@@ -123,13 +121,15 @@ Como se puede observar al no estar el puerto "80" activo se recibe la etiqueta [
 Con NetCat se creara un servidor TCP en el puerto "80" de H3 y se realizará una conexión desde H2, se capturará el tráfico con Wireshark en R3:    
 
 Comando para el servidor TCP en H3:    
-```bash
-nc -l 80
-```
+
+	:::bash
+	nc -l 80
+
 Comando para realizar la conexión desde H2:    
-```bash
-nc 10.0.130.3 80
-```
+
+	:::bash
+	nc 10.0.130.3 80
+
 A continuación se escribe en H2 y aparecerá en H3 como muestra la siguiente imagen:
 
 ![TCPconexion]({static}/images/Hping3yNetCat/TCPconexion.png)    
@@ -153,13 +153,15 @@ Aquí se observa la etiqueta [FIN,ACK] y sus respectivas respuestas, indicando e
 Probaremos a realizar lo mismo pero con un servidor UDP en vez de TCP, esta vez el servidor en H1 y la conexión desde H4:    
 
 Comando para el servidor UDP en H1:    
-```bash
-nc -u -l 80
-```
+
+	:::bash
+	nc -u -l 80
+
 Comando para realizar la conexión UDP desde H4:    
-```bash
-nc -u 10.0.130.3 80
-```
+
+	:::bash
+	nc -u 10.0.130.3 80
+
 A continuación se escribe en H4 y aparecerá en H1 como muestra la siguiente imagen:    
 
 ![UDPconexion]({static}/images/Hping3yNetCat/UDPconexion.png)    
