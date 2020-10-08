@@ -17,14 +17,14 @@ dig www.marca.com
 ```
 Captura de pantalla correspondiente:    
 
-![dig1]({{static}}/images/DigyWireshark/digmarca.png) 
+![dig1]({static}/images/DigyWireshark/digmarca.png) 
 
 ```bash
 dig www.elmundo.com
 ```
 Captura de pantalla correspondiente:    
 
-![dig2]({{static}}/images/DigyWireshark/digelmundo.png)     
+![dig2]({static}/images/DigyWireshark/digelmundo.png)     
 
 Como se puede observar en las imágenes ambas webs estan alojadas en el servidor `151.101.133.50` con el CNAME(alias del dominio) "unidadeditorial.map.fastly.net".    
 
@@ -37,23 +37,23 @@ En ella podemos observar lo siguiente:
 
 La petición y respuesta DNS:
 
-![dns1]({{static}}/images/DigyWireshark/capturadnsmarca1.png)
-![dns2]({{static}}/images/DigyWireshark/capturadns2.png)
-![dns3]({{static}}/images/DigyWireshark/capturadns3.png)
+![dns1]({static}/images/DigyWireshark/capturadnsmarca1.png)
+![dns2]({static}/images/DigyWireshark/capturadns2.png)
+![dns3]({static}/images/DigyWireshark/capturadns3.png)
 
 La primera conexión TSL, puesto que es una página que tiene seguridad HTTPS, con esto el cliente le pide los certificados a la página para poder conectarse de forma segura:    
 
 Mensajes del cliente:    
 
-![TSL1]({{static}}/images/DigyWireshark/clienthellow1.png)
+![TSL1]({static}/images/DigyWireshark/clienthellow1.png)
 
-![TSL2]({{static}}/images/DigyWireshark/clienthellow2.png)
+![TSL2]({static}/images/DigyWireshark/clienthellow2.png)
 
 Mensajes del servidor:    
 
-![TSL3]({{static}}/images/DigyWireshark/serverhellow.png)
+![TSL3]({static}/images/DigyWireshark/serverhellow.png)
 
-![TSL4]({{static}}/images/DigyWireshark/serverhellow2.png)
+![TSL4]({static}/images/DigyWireshark/serverhellow2.png)
 
 Ya que es una página con seguridad HTTPS no podemos sacar mucha información, de todas formas dejo por aquí los filtros de Wireshark para páginas HTTP:   
 
