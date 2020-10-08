@@ -20,6 +20,9 @@ DEFAULT_PAGINATION = 5
 # Theme
 THEME = './MinimalXY'
 
+#Opciones Markdown:
+MARKDOWN_EXTENSIONS = ['codehilite(noclasses=True, pygments_style=native)', 'extra']
+
 # Theme customizations
 MINIMALXY_CUSTOM_CSS = 'static/custom.css'
 MINIMALXY_FAVICON = 'theme/images/arpovealogo.PNG'
