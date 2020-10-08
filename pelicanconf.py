@@ -25,14 +25,14 @@ MINIMALXY_CUSTOM_CSS = 'static/custom.css'
 MINIMALXY_FAVICON = 'favicon.ico'
 
 # Author
-AUTHOR_INTRO = u'Hello world! I’m John Doe.'
-AUTHOR_DESCRIPTION = u'Hello world! I’m John Doe. I like coffee, birds and Python.'
+AUTHOR_INTRO = u'Buenas! Mi nombre es Adrián'
+AUTHOR_DESCRIPTION = u'Apasionado de las tecnologías'
 AUTHOR_AVATAR = 'http://www.gravatar.com/avatar/abcdefghijkl?s=240'
-AUTHOR_WEB = 'http://mypersonalsite.com'
+AUTHOR_WEB = 'http://arpovea.vercel.app'
 
 # Services
 GOOGLE_ANALYTICS = 'UA-12345678-9'
-DISQUS_SITENAME = 'johndoe'
+DISQUS_SITENAME = 'arpovea'
 
 # Social
 SOCIAL = (
