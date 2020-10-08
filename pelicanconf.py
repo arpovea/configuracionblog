@@ -44,6 +44,6 @@ SOCIAL = (
 
 # Menu
 MENUITEMS = (
-    ('Categories', '/'),
-    ('Archive', '/'),
+    ('Categorías', '/categories.html'),
+    ('Articulos', '/archives.html'),
 )
