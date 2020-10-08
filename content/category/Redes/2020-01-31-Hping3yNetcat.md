@@ -20,7 +20,7 @@ Esquema de escenario:
 `10.0.120.0/24 -> r2 y r3`    
 `10.0.130.0/24 -> h3, h4  y r3`    
 
-![escenario]({{ site.baseurl }}/assets/img/Hping3yNetCat/escenario.png)
+![escenario]({static}/images/Hping3yNetCat/escenario.png)
 
 Se dejan por aquí los enlaces a los scripts tanto del escenario como del despliegue en Mininet:    
 
@@ -82,8 +82,8 @@ La opción -c indica el número de paquetes que se enviarán en este caso "5".
 
 Estas son las capturas realizadas con Wireshark en R3:    
 
-![echorequest1]({{ site.baseurl }}/assets/img/Hping3yNetCat/capturaechorequest1.png)    
-![echorequest2]({{ site.baseurl }}/assets/img/Hping3yNetCat/capturaechorequest2.png)    
+![echorequest1]({static}/images/Hping3yNetCat/capturaechorequest1.png)    
+![echorequest2]({static}/images/Hping3yNetCat/capturaechorequest2.png)    
 
 A continución cambiaremos la TTL para que no sea alcanzable H4:    
 
@@ -95,7 +95,7 @@ hping -K 0 --ttl 3 -c 3 10.0.130.4
 
 La opcion --ttl cambia por defecto la ttl de "64"(por defecto) en "3" en este caso.
 
-![TTL]({{ site.baseurl }}/assets/img/Hping3yNetCat/TTL.png)
+![TTL]({static}/images/Hping3yNetCat/TTL.png)
 
 Como se puede observar en la imagen no llega a su destino.    
 
@@ -110,8 +110,8 @@ La opción -p indica el puerto destino.
 
 Capturas en Wireshark:
 
-![TCP4000-1]({{ site.baseurl }}/assets/img/Hping3yNetCat/capturaTCP4000-1.png)    
-![TCP4000-2]({{ site.baseurl }}/assets/img/Hping3yNetCat/capturaTCP4000-2.png)    
+![TCP4000-1]({static}/images/Hping3yNetCat/capturaTCP4000-1.png)    
+![TCP4000-2]({static}/images/Hping3yNetCat/capturaTCP4000-2.png)    
 
 Como se puede observar al no estar el puerto "80" activo se recibe la etiqueta [RST,ACK] que indica que no hay nada en ese puerto, si hubiera un servicio en ese puerto escuchando se mostraría la etiqueta [SYN,ACK].    
 
@@ -132,20 +132,20 @@ nc 10.0.130.3 80
 ```
 A continuación se escribe en H2 y aparecerá en H3 como muestra la siguiente imagen:
 
-![TCPconexion]({{ site.baseurl }}/assets/img/Hping3yNetCat/TCPconexion.png)    
+![TCPconexion]({static}/images/Hping3yNetCat/TCPconexion.png)    
 
 Capturas de Wireshark:    
 
-![netcap1]({{ site.baseurl }}/assets/img/Hping3yNetCat/netcap1.png)    
-![netcap2]({{ site.baseurl }}/assets/img/Hping3yNetCat/netcat2.png)    
-![mensaje1]({{ site.baseurl }}/assets/img/Hping3yNetCat/mensaje1psh.png)    
-![mensaje2]({{ site.baseurl }}/assets/img/Hping3yNetCat/mensaje2psh.png)    
+![netcap1]({static}/images/Hping3yNetCat/netcap1.png)    
+![netcap2]({static}/images/Hping3yNetCat/netcat2.png)    
+![mensaje1]({static}/images/Hping3yNetCat/mensaje1psh.png)    
+![mensaje2]({static}/images/Hping3yNetCat/mensaje2psh.png)    
 
 Como se puede obsevar en estas capturas se ve la conexión TCP con la etiqueta [SYN,ACK] y luego los mensajes enviados con la etiqueta [PSH,ACK].    
 
 Ahora se cerrara la conexión y se mostrará la secuencia de cierre con Wireshark:    
 
-![secuenciadecerrado]({{ site.baseurl }}/assets/img/Hping3yNetCat/secuenciadecerrado.png)    
+![secuenciadecerrado]({static}/images/Hping3yNetCat/secuenciadecerrado.png)    
 
 Aquí se observa la etiqueta [FIN,ACK] y sus respectivas respuestas, indicando el cierre de la conexión.    
 
@@ -162,12 +162,12 @@ nc -u 10.0.130.3 80
 ```
 A continuación se escribe en H4 y aparecerá en H1 como muestra la siguiente imagen:    
 
-![UDPconexion]({{ site.baseurl }}/assets/img/Hping3yNetCat/UDPconexion.png)    
+![UDPconexion]({static}/images/Hping3yNetCat/UDPconexion.png)    
 
 Capturas de Wireshark:    
 
-![UDP1]({{ site.baseurl }}/assets/img/Hping3yNetCat/Netcatudp1.png)    
-![UDP2]({{ site.baseurl }}/assets/img/Hping3yNetCat/netcapUDP2.png)    
+![UDP1]({static}/images/Hping3yNetCat/Netcatudp1.png)    
+![UDP2]({static}/images/Hping3yNetCat/netcapUDP2.png)    
 
 Con el protocolo UDP no se comprueban las mismas cosas que con el protocolo TCP, la única ventaja de UDP es que es más liviano y en algunas ocasiones tiene sus ventajas. Como se puede observar solo están los mensajes enviados desde H4 hacia H1.    
 

@@ -36,7 +36,7 @@ Listamos dispositivos de bloque del sistema:
 lsblk
 ```
 
-![lsblk]({{ site.baseurl }}/assets/img/Insta.S.O/lsblk.png)  
+![lsblk]({static}/images/Insta.S.O/lsblk.png)  
 
 Listamos los dispositivos físicos agregados a LVM:
 
@@ -44,7 +44,7 @@ Listamos los dispositivos físicos agregados a LVM:
 sudo pvdisplay
 ```
 
-![pvdisplay]({{ site.baseurl }}/assets/img/Insta.S.O/pvdisplay.png)
+![pvdisplay]({static}/images/Insta.S.O/pvdisplay.png)
 
 Listamos los volúmenes lógicos:
 
@@ -52,7 +52,7 @@ Listamos los volúmenes lógicos:
 sudo lvdisplay
 ```
 
-![lvdisplay]({{ site.baseurl }}/assets/img/Insta.S.O/lvdisplay.png)
+![lvdisplay]({static}/images/Insta.S.O/lvdisplay.png)
 
 Listamos los grupos de vólumenes:
 
@@ -60,7 +60,7 @@ Listamos los grupos de vólumenes:
 sudo vgs
 ```
 
-![vgs]({{ site.baseurl }}/assets/img/Insta.S.O/vgs.png)
+![vgs]({static}/images/Insta.S.O/vgs.png)
 
 
 ***

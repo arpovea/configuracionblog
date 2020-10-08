@@ -33,7 +33,7 @@ Como podemos observar en el fichero agregamos 5 discos para realizar distintas p
 
 Una vez iniciada la máquina deberías obtener con el comando `lsblk` lo siguiente:
 
-![lsblk]({{ site.baseurl }}/assets/img/TareaRAID5/lsblk.png)  
+![lsblk]({static}/images/TareaRAID5/lsblk.png)  
 
 Lo siguiente es instalar el paquete `mdadm`, si no lo tenéis ya instalado en la máquina virtual:
 
@@ -54,7 +54,7 @@ sudo mdadm -C /dev/md5 --level=RAID5 --raid-devices=3 /dev/vdb /dev/vdc /dev/vdd
 ```
 Si realizas de nuevo un `lsblk` obtendrás algo como esto:
 
-![lsblk2]({{ site.baseurl }}/assets/img/TareaRAID5/lsblk2.png)
+![lsblk2]({static}/images/TareaRAID5/lsblk2.png)
 
 La diferencia entre RAID5 y RAID1 es:
 
@@ -80,7 +80,7 @@ sudo mdadm -D /dev/md5
 
 En la siguiente imagen se pueden ver tanto el estado como los detalles:
 
-![mdadmstatus]({{ site.baseurl }}/assets/img/TareaRAID5/comprobacionstadoraid.png)
+![mdadmstatus]({static}/images/TareaRAID5/comprobacionstadoraid.png)
 
 #### Tarea 3: Crea un volumen lógico (LVM) de 500MB en el RAID5.    
 
@@ -94,7 +94,7 @@ sudo lvcreate tareas -L 500M -n tarea3
 
 Quedando como en la siguiente imagen:
 
-![Vlogico]({{ site.baseurl }}/assets/img/TareaRAID5/Vlogico.png)
+![Vlogico]({static}/images/TareaRAID5/Vlogico.png)
 
 #### Tarea 4: Formatea ese volumen con un sistema de archivo `xfs`.    
 
@@ -132,7 +132,7 @@ cat /proc/mdstat
 
 Mostrará algo similar a la siguiente imagen donde se observa que el disco esta marcado como fallido:
 
-![fallovdb]({{ site.baseurl }}/assets/img/TareaRAID5/fallovdb.png)
+![fallovdb]({static}/images/TareaRAID5/fallovdb.png)
 
 El fichero se puede seguir visualizando sin problema.
 
@@ -150,7 +150,7 @@ Observamos de nuevo el estado del RAID5 y mostrará lo siguiente:
 cat /etc/proc/mdstat
 ```
 
-![removevdb]({{ site.baseurl }}/assets/img/TareaRAID5/removevdb.png)
+![removevdb]({static}/images/TareaRAID5/removevdb.png)
 
 
 #### Tarea 8: Imaginemos que lo cambiamos por un nuevo disco nuevo (el dispositivo de bloque se llama igual), añádelo al array y 
@@ -171,7 +171,7 @@ cat /proc/mdstat
 
 Obteniendo algo similar a lo siguiente:
 
-![agregandovde]({{ site.baseurl }}/assets/img/TareaRAID5/agregandovde.png)
+![agregandovde]({static}/images/TareaRAID5/agregandovde.png)
 
 #### Tarea 9: Añade otro disco como reserva. Vuelve a simular el fallo de un disco y comprueba como automáticamente se realiza la sincronización con el disco de reserva.
 
@@ -199,7 +199,7 @@ sudo mdadm --manage /dev/md5 --fail /dev/vdc
 
 Como podemos ver en la siguiente imagen el disco pasa de SPARE (S) a activo y el otro se marca como FAIL (F)
 
-![SPAREautilizado]({{ site.baseurl }}/assets/img/TareaRAID5/SPAREautilizado.png)
+![SPAREautilizado]({static}/images/TareaRAID5/SPAREautilizado.png)
 
 Como repunte, si quisieras que el disco se agrege como dispositivo adicional para aumentar las dimesiones del raid, después de agregarlo, realiza el siguiente comando:
 
@@ -226,7 +226,7 @@ Recalcar que con `xfs`se puede realizar esta acción en caliente con otros siste
 
 Al finalizar todas las tareas en este orden la orden `lsblk -f` debería mostrar algo así:
 
-![lsblkfinal]({{ site.baseurl }}/assets/img/TareaRAID5/lsblkfinal.png)
+![lsblkfinal]({static}/images/TareaRAID5/lsblkfinal.png)
 
 ***
     
