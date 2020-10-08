@@ -110,11 +110,6 @@
         <a href="{{ SITEURL }}" id="header-logo" title="Home">{{ AUTHOR[0] + AUTHOR[AUTHOR.index(" ")+1] }}</a>
         <nav id="header-menu">
           <ul>
-            {% if DISPLAY_PAGES_ON_MENU %}
-            {% for p in pages %}
-            <li{% if p==page %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-            {% endfor %}
-            {% endif %}
             {% if DISPLAY_CATEGORIES_ON_MENU %}
             {% for cat, null in categories %}
             {% if cat != DEFAULT_CATEGORY %}
@@ -125,6 +120,11 @@
             {% for title, link in MENUITEMS %}
             <li class="w3-bottombar w3-border-white w3-hover-border-green"><a href="{{ link }}">{{ title }}</a></li>
             {% endfor %}
+            {% if DISPLAY_PAGES_ON_MENU %}
+            {% for p in pages %}
+            <li{% if p==page %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+            {% endfor %}
+            {% endif %}
           </ul>
         </nav>
       </header>

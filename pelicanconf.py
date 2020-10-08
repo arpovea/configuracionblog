@@ -22,7 +22,7 @@ THEME = './MinimalXY'
 
 # Theme customizations
 MINIMALXY_CUSTOM_CSS = 'static/custom.css'
-MINIMALXY_FAVICON = 'favicon.ico'
+MINIMALXY_FAVICON = 'theme/images/arpovealogo.PNG'
 
 # Author
 AUTHOR_INTRO = u'¡Hola Mundo! Mi nombre es Adrián.'
