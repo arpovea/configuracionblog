@@ -27,7 +27,7 @@ MINIMALXY_FAVICON = 'favicon.ico'
 # Author
 AUTHOR_INTRO = u'¡Hola Mundo! Mi nombre es Adrián.'
 AUTHOR_DESCRIPTION = u'Apasionado de las tecnologías.'
-AUTHOR_AVATAR = 'http://www.gravatar.com/avatar/abcdefghijkl?s=240'
+AUTHOR_AVATAR = '/static/images/arpovealogo.png'
 AUTHOR_WEB = 'http://arpovea.vercel.app'
 
 # Services
@@ -36,10 +36,10 @@ DISQUS_SITENAME = 'arpovea'
 
 # Social
 SOCIAL = (
-    ('facebook', 'http://www.facebook.com/johndoe'),
-    ('twitter', 'http://twitter.com/johndoe'),
-    ('github', 'https://github.com/johndoe'),
-    ('linkedin', 'http://www.linkedin.com/in/johndoe'),
+#    ('facebook', 'http://www.facebook.com/johndoe'),
+    ('twitter', 'http://twitter.com/arodriguezpovea'),
+    ('github', 'https://github.com/arpovea'),
+    ('linkedin', 'http://www.linkedin.com/in/arpovea'),
 )
 
 # Menu
