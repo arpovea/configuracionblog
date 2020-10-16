@@ -42,7 +42,7 @@ Los datos mostrados son:
 * Confianza que se tiene sobre esa clave.
 * Fecha de validez si dispone de ella.
 
-Para darle fecha de validez a la clave, cuando se genera la clave con "gpg gen-key" o "gpg --full-generate-key" preguntará algo como esto:
+Para darle fecha de validez a la clave, cuando se genera la clave con "gpg --gen-key" o "gpg --full-generate-key" preguntará algo como esto:
 
 ```console
 Por favor, especifique el período de validez de la clave.
