@@ -1,6 +1,6 @@
 #! /usr/bin/bash 
 #Activamos el entorno virtual
-source /bin/activate
+source bin/activate
 #Guardo cambios en el repositorio de configuración:
 git add .
 git commit -am "Agregando y modificando informacion"
