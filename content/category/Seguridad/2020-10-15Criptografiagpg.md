@@ -36,7 +36,7 @@ gpg --list-keys
 ``` 
 Los datos mostrados son:
 
-* El tipo de clave y el sistema de criptografía que tiene.Por ejemplo "rsa4096".
+* El tipo de clave y el sistema de criptografía que tiene. Por ejemplo "rsa4096".
 * El uid, número que identifica la clave, para identificarla se pueden utilizar los últimos 8 dígitos.
 * El nombre del propietario junto con su correo y comentario si dispone de él.
 * Confianza que se tiene sobre esa clave.
@@ -53,7 +53,7 @@ Por favor, especifique el período de validez de la clave.
       <n>y = la clave caduca en n años
 ¿Validez de la clave (0)? 1M
 ```
-En el ejemplo de arriba al final se le asigno 1 mes.
+En el ejemplo de arriba al final se le asignó 1 mes.
 
 Para ver las claves privadas:
 ```
@@ -94,13 +94,13 @@ Esto pedirá el uid del destinatario en nuestro caso el de Pepito Pérez, en la 
 
 ![gpgcifrado]({static}/images/Criptografía/gpgcifrado.png) 
 
-Tambien se puede utilizar el comando con argumentos para que no sea de forma interactiva:
+También se puede utilizar el comando con argumentos para que no sea de forma interactiva:
 
 ```
 gpg -e -u "Adrian Rodriguez" -r "pepito perez"
 ```
 
-Cualquiera que no este en la lista al crear el mensaje cifrado, no puede descifrarlo. Le lanzara un mensaje de error del estilo:
+Cualquiera que no esté en la lista al crear el mensaje cifrado, no puede descifrarlo. Le lanzará un mensaje de error del estilo:
 ```
 gpg: descifrado fallido: No secret key
 ```
@@ -172,14 +172,14 @@ Para importar una clave de un servidor:
 gpg --recv-keys --keyserver pgp.rediris.es D4BB0593
 ```
 
-En las siguientes imagenes se muestra como un usuario, sube la clave y otro importa esta clave desde el servidor:
+En las siguientes imágenes se muestra como un usuario, sube la clave y otro importa esta clave desde el servidor:
 
 ![subirclaveserv]({static}/images/Criptografía/subirclave.png)
 ![importarclaveserv]({static}/images/Criptografía/importarclave.png)
 
 ## Cifrado OPENSSL
 
-A continución se muestran los comandos para crear una clave privada en openssl y generar una clave pública de la clave privada.
+A continuación se muestran los comandos para crear una clave privada en openssl y generar una clave pública de la clave privada.
 
 Crear clave privada:
 ```
@@ -192,7 +192,7 @@ Crear clave pública:
 openssl rsa -in key.pem -pubout -out key.public.pem
 ```
 
-Se puede tambien encriptar la clave privada con una contraseña con el siguiente comando:
+Se puede también encriptar la clave privada con una contraseña con el siguiente comando:
 
 ```
 openssl rsa -in key.pem -des3 -out enc-key.pem
