@@ -21,7 +21,11 @@ DEFAULT_PAGINATION = 5
 THEME = './MinimalXY'
 
 #Opciones Markdown:
-MARKDOWN_EXTENSIONS = ['codehilite(noclasses=True, pygments_style=native)', 'extra']
+MARKDOWN: {'extension_configs': 
+    {'markdown.extensions.codehilite': 
+        {'css_class': 'highlight'},
+     'markdown.extensions.extra': {},
+     'markdown.extensions.meta': {}}
 
 # Theme customizations
 MINIMALXY_CUSTOM_CSS = 'static/custom.css'
@@ -39,7 +43,7 @@ DISQUS_SITENAME = 'arpovea'
 
 # Social
 SOCIAL = (
-#    ('facebook', 'http://www.facebook.com/johndoe'),
+#    ('facebook', 'http://www.facebook.com/'),
     ('twitter', 'http://twitter.com/arodriguezpovea'),
     ('github', 'https://github.com/arpovea'),
     ('linkedin', 'http://www.linkedin.com/in/arpovea'),
