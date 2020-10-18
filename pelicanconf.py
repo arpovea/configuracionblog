@@ -21,12 +21,6 @@ DEFAULT_PAGINATION = 5
 THEME = './MinimalXY'
 
 #Opciones Markdown:
-MARKDOWN: {'extension_configs': 
-    {'markdown.extensions.codehilite': 
-        {'css_class': 'highlight'},
-     'markdown.extensions.extra': {},
-     'markdown.extensions.meta': {}}
-    }
 
 # Theme customizations
 MINIMALXY_CUSTOM_CSS = 'static/custom.css'
