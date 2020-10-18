@@ -18,7 +18,7 @@ Lo primero que se va a realizar es una actualización de todos los paquetes de n
 sudo apt-get update && sudo apt-get upgrade -y
 ```
 
-#### Agregar arquitectura i386.
+### Agregar arquitectura i386.
 
 Para ello utiliza:
 
@@ -32,7 +32,7 @@ Luego actualiza la lista de paquetes:
 sudo apt-get update
 ```
 
-#### Instalación de paquetes
+### Instalación de paquetes
 
 Se van a descargar estos paquetes con "apt" y instalar con "dpkg", ya que "apt" al instalar paquetes de una arquitectura borra el de la anterior arquitectura, lo que provoca que el sistema se rompa.
 
@@ -133,7 +133,7 @@ Reinicia el equipo para asegurar el cambio de kernel si fuera necesario.
 sudo reboot
 ```
 
-#### Borrado de la arquitectura amd64
+### Borrado de la arquitectura amd64
 
 Una vez realizado todo lo anterior se puede remover la arquitectura amd64 con:
 
