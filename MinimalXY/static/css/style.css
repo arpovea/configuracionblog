@@ -223,7 +223,7 @@ ul.social li a:hover {
   border-left: 5px solid;
   border-color: #ccc;
   padding-left: 1rem;
-  font-style: monospace;
+  font-style: italic;
 }
 
 #content div.highlight {
@@ -263,7 +263,7 @@ ul.social li a:hover {
   color: #4CAF50;
   font-size: 18pt;
   text-align: right;
-  font-style: monospace;
+  font-style: italic;
   width: 50%;
   float: right;
 }
