@@ -263,7 +263,7 @@ ul.social li a:hover {
   color: #4CAF50;
   font-size: 18pt;
   text-align: right;
-  font-style: italic;
+  font-style: monospace;
   width: 50%;
   float: right;
 }
