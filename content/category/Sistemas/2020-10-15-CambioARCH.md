@@ -18,7 +18,7 @@ Lo primero que se va a realizar es una actualización de todos los paquetes de n
 sudo apt-get update && sudo apt-get upgrade -y
 ```
 
-#### Paso 1: Agregar arquitectura i386.
+#### Agregar arquitectura i386.
 
 Para ello utiliza:
 
