@@ -12,25 +12,23 @@ Buenas! En esta ocasión se va a realizar el cambio de una arquitectura amd64 a 
 
 ## Cambio de Arquitectura (De amd64 a i386):
 
-Lo primero que se va a realizar es una actualización de todos los paquetes de nuestro equipo a su última versión estable, para ello:
+Lo primero que se va a realizar es una actualización de todos los paquetes de nuestro equipo a su última versión estable, para ello,
 
-:::console
-
-	sudo apt-get update && sudo apt-get upgrade -y
-
+```bash
+sudo apt-get update && sudo apt-get upgrade -y
+```
 
 ### Agregar arquitectura i386.
 
 Para ello utiliza:
 
-:::text
-
-	sudo dpkg --add-architecture i386
-
+```bash
+sudo dpkg --add-architecture i386
+```
 
 Luego actualiza la lista de paquetes:
 
-```:::console
+```bash
 sudo apt-get update
 ```
 
@@ -40,19 +38,19 @@ Se van a descargar estos paquetes con "apt" y instalar con "dpkg", ya que "apt" 
 
 Los paquetes descargados se almacenan en "/var/cache/apt/archives/" por lo que interesa tener este directorio limpio, para ello:
 
-```:::console
+```bash
 sudo apt-get clean
 ```
 
 Una vez limpio el directorio, realiza la descarga los paquetes de los distintos instaladores en su versión i386 esto provocará el cambio de arquitectura principal:
 
-```:::console
+```bash
 sudo apt-get -y --no-install-recommends --download-only install dpkg:i386 apt:i386 aptitude:i386 apt-utils:i386
 ```
 
 Luego instálalos con:
 
-```:::console
+```bash
 sudo dpkg --install /var/cache/apt/archives/*.deb
 ```
 
@@ -61,31 +59,31 @@ Si da problemas al procesar recuerda intentar de nuevo la instalación, si da pr
 
 Una vez instalados estos dara problemas de dependencias, para arreglar esto utiliza:
 
-```:::console
+```bash
 sudo apt-get --fix-broken install -y --allow-remove-essential
 ```
 
 A continuación descarga todos los paquetes amd64 pero con la versión i386, menos el kernel:
 
-```:::console
+```bash
 sudo apt-get --download-only -y --no-install-recommends install `dpkg -l | grep '^.i' | awk '{print $2}' | grep :amd64 | egrep -v 'linux-image-.*' | sed 's/:amd64/:i386/g'`
 ```
 
 Ahora instala las librerías y perl (esto suele reducir los errores):
 
-```:::console
+```bash
 sudo dpkg --install /var/cache/apt/archives/lib*.deb /var/cache/apt/archives/perl*.deb
 ```
 
 Realiza el siguiente comando para asegurar que no hay ningún paquete sin configurar: 
 
-```:::console
+```bash
 sudo dpkg --configure -a
 ```
 
 Instala los demás paquetes:
 
-```:::console
+```bash
 sudo dpkg --install /var/cache/apt/archives/*.deb
 ```
 
@@ -99,25 +97,25 @@ Una vez instalados todos los paquetes de la arquitectura i386, solo queda borrar
 
 Realiza el siguiente comando para borrar los paquetes que no son necesarios en el sistema:
 
-```:::console
+```bash
 sudo apt-get autoremove -y
 ```
 
 Ahora instala el kernel i386:
 
-```:::console
+```bash
 sudo apt-get install -y linux-image-686
 ```
 
 A continuación reinicia el equipo:
 
-```:::console
+```bash
 sudo reboot
 ```
 
 Comprueba que está el nuevo kernel funcionando con:
 
-```:::console
+```bash
 uname -r
 ```
 
@@ -125,13 +123,13 @@ Aquí puede ocurrir que esté una versión "cloud" del kernel amd64, pero no hay
 
 Una vez este el kernel i386 instalado borra todos los paquetes amd64:
 
-```:::console
+```bash
 sudo apt-get remove -y `dpkg -l | grep '^.i' | awk '{print $2}' | grep :amd64`
 ```
 
 Reinicia el equipo para asegurar el cambio de kernel si fuera necesario.
 
-```:::console
+```bash
 sudo reboot
 ```
 
@@ -139,7 +137,7 @@ sudo reboot
 
 Una vez realizado todo lo anterior se puede remover la arquitectura amd64 con:
 
-```:::console
+```bash
 sudo dpkg --remove-architecture amd64
 ```
 
