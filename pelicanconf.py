@@ -22,6 +22,7 @@ THEME = './MinimalXY'
 
 #Opciones Markdown:
 
+
 # Theme customizations
 MINIMALXY_CUSTOM_CSS = 'static/custom.css'
 MINIMALXY_FAVICON = 'theme/images/arpovealogo.PNG'
