@@ -26,6 +26,7 @@ MARKDOWN: {'extension_configs':
         {'css_class': 'highlight'},
      'markdown.extensions.extra': {},
      'markdown.extensions.meta': {}}
+    }
 
 # Theme customizations
 MINIMALXY_CUSTOM_CSS = 'static/custom.css'
