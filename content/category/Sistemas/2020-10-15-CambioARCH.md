@@ -14,7 +14,7 @@ Buenas! En esta ocasión se va a realizar el cambio de una arquitectura amd64 a 
 
 Lo primero que se va a realizar es una actualización de todos los paquetes de nuestro equipo a su última versión estable, para ello,
 
-```code
+```
 sudo apt-get update && sudo apt-get upgrade -y
 ```
 
@@ -22,29 +22,29 @@ sudo apt-get update && sudo apt-get upgrade -y
 
 Para ello utiliza:
 
-```code
+```
 sudo dpkg --add-architecture i386
 ```
 
 Luego actualiza la lista de paquetes:
 
-```code
+```
 sudo apt-get update
 ```
 
-#### Paso 3: Instalación de paquetes
+#### Instalación de paquetes
 
 Se van a descargar estos paquetes con "apt" y instalar con "dpkg", ya que "apt" al instalar paquetes de una arquitectura borra el de la anterior arquitectura, lo que provoca que el sistema se rompa.
 
 Los paquetes descargados se almacenan en "/var/cache/apt/archives/" por lo que interesa tener este directorio limpio, para ello:
 
-```code
+```
 sudo apt-get clean
 ```
 
 Una vez limpio el directorio, realiza la descarga los paquetes de los distintos instaladores en su versión i386 esto provocará el cambio de arquitectura principal:
 
-```code
+```
 sudo apt-get -y --no-install-recommends --download-only install dpkg:i386 apt:i386 aptitude:i386 apt-utils:i386
 ```
 
@@ -138,7 +138,7 @@ sudo reboot
 Una vez realizado todo lo anterior se puede remover la arquitectura amd64 con:
 
 ```
-sudo dpkg --remove-architecture am64
+sudo dpkg --remove-architecture amd64
 ```
 
 Con esto el equipo quedará trasnformado por completo a una arquitectura i386.
