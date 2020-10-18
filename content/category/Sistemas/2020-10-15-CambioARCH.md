@@ -15,7 +15,8 @@ Buenas! En esta ocasión se va a realizar el cambio de una arquitectura amd64 a 
 Lo primero que se va a realizar es una actualización de todos los paquetes de nuestro equipo a su última versión estable, para ello:
 
 ::console
-sudo apt-get update && sudo apt-get upgrade -y
+
+	sudo apt-get update && sudo apt-get upgrade -y
 
 
 ### Agregar arquitectura i386.
@@ -23,7 +24,8 @@ sudo apt-get update && sudo apt-get upgrade -y
 Para ello utiliza:
 
 ::text
-sudo dpkg --add-architecture i386
+	
+	sudo dpkg --add-architecture i386
 
 
 Luego actualiza la lista de paquetes:
