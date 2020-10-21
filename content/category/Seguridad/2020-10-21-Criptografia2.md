@@ -10,8 +10,21 @@ Buenas! En esta ocasión vamos se van a realizar una serie de tareas con firmas 
 
 ***
 
+Descarga una firma de un compañerp desde un servidor de claves gpg y importala a tu anillo de claves.
 
+gpg --recv-keys --keyserver keys.gnupg.net 12B9A4F8
 
+Firma esta clave de la siguiente forma:
+
+gpg --edit-key 12B9A4F8
+
+fpr -> para mirar la huella
+
+sign -> para firmar
+
+quit
+
+gpg --list-key sign 12B9A4F8 -->lista la clave y sus firmas
 
 ***
     
